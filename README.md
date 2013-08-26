@@ -25,7 +25,7 @@ Installed on your development machine:
 3. Web server such as [MAMP](http://mamp.info/en/downloads) or [XAMPP](http://apachefriends.org/en/xampp.html) -- or just run `python -m SimpleHTTPServer` in your application directory (or better start a [secure HTTPS server](http://www.piware.de/2011/01/creating-an-https-server-in-python/) to avoid having to 'allow' the camera every time you reload the page in the browser).
 4. Web cam.
 5. git, in order to get the source code.
-6. The [source code](https://bitbucket.org/webrtc/codelab/src).
+6. The [source code](http://goo.gl/V9tEOQ).
 7. Node.js with socket.io and node-static. (Node.js hosting would also be an advantage -- see below for some options.)
 
 *The instructions in this codelab assume you are using Mac OS, Linux or Windows. Unless you know what you're doing, it's probably easier not to attempt this codelab from a Chromebook!*
@@ -38,14 +38,14 @@ Using git, clone the codelab repository onto your development computer. If you h
 
 ## Step 1: Create a blank HTML5 document
 
-Complete example: [complete/step1.html](https://bitbucket.org/webrtc/codelab/src/master/complete/step1.html).
+Complete example: [complete/step1.html](http://goo.gl/zwAt6R).
 
 1. Create a bare-bones HTML document.
 2. Open that from localhost (see server suggestions above).
 
 ## Step 2: Get video from your webcam
 
-Complete example: [complete/step2.html](https://bitbucket.org/webrtc/codelab/src/master/complete/step2.html).
+Complete example: [complete/step2.html](http://goo.gl/ZDXUE1).
 
 1. Add a video element to your page.
 2. Add the following JavaScript to the script element on your page, to enable getUserMedia() to set the source of the video from the web cam:
@@ -109,7 +109,7 @@ For example:
 
 ## Step 3: Stream video with RTCPeerConnection
 
-Complete example: [complete/step3.html](https://bitbucket.org/webrtc/codelab/src/master/complete/step3.html).
+Complete example: [complete/step3.html](http://goo.gl/3YG0m5).
 
 RTCPeerConnection is the WebRTC API for video and audio calling.
 
@@ -129,7 +129,7 @@ This example sets up a connection between two peers on the same page. Not much u
           <button id="hangupButton">Hang Up</button>
         </div>
 
-3. Add the JavaScript from [complete/step3.html](https://bitbucket.org/webrtc/codelab/raw/master/complete/step3.html).
+3. Add the JavaScript from [complete/step3.html](http://goo.gl/3YG0m5).
 
 ### Explanation
 
@@ -154,7 +154,7 @@ This code does a lot!
 
 ## Step 4: Stream arbitrary data with RTCDataChannel
 
-Complete example: [complete/step4.html](https://bitbucket.org/webrtc/codelab/src/master/complete/step4.html).
+Complete example: [complete/step4.html](http://goo.gl/Dcmljy).
 
 For this step, we'll use RTCDataChannel to send text between two textareas on the same page. Not very useful, except to demonstrate how the API works.
 
@@ -169,7 +169,7 @@ For this step, we'll use RTCDataChannel to send text between two textareas on th
           <button id="closeButton">Stop</button>
         </div>
 
-3. Add the JavaScript from [complete/step4.html](https://bitbucket.org/webrtc/codelab/raw/master/complete/step4.html).
+3. Add the JavaScript from [complete/step4.html](http://goo.gl/Dcmljy).
 
 ### Explanation
 
@@ -213,7 +213,7 @@ Notice the use of constraints.
 
 ## Step 5: Set up a signaling server and exchange messages
 
-Complete example: [complete/step5](https://bitbucket.org/webrtc/codelab/src/master/complete/step5).
+Complete example: [complete/step5](http://goo.gl/YS89dL).
 
 RTCPeerConnection instances need to exchange metadata in order to set up and maintain a WebRTC 'call':
 
@@ -265,7 +265,7 @@ Our simple WebRTC application will only permit a maximum of two peers to share a
 
   (You don't need to learn about node-static for this exercise: it just makes the server simpler.)
 
-2. Using the code from the [step 5](complete/step5) directory, run the server (_server.js_). To start the server, run the following command from a terminal in your application directory:
+2. Using the code from the [step 5](http://goo.gl/mGAAMn) directory, run the server (_server.js_). To start the server, run the following command from a terminal in your application directory:
 
         node server.js
 
@@ -287,11 +287,11 @@ Our simple WebRTC application will only permit a maximum of two peers to share a
 
 ## Step 6: RTCPeerConnection with messaging
 
-Complete example: [complete/step6](https://bitbucket.org/webrtc/codelab/src/master/complete/step6).
+Complete example: [complete/step6](http://goo.gl/M4wZbz).
 
 In this step, we build a video chat client, using the signaling server we created in Step 5 and the RTCPeerConnection code from Step 3.
 
-**This step users [adapter.js](https://bitbucket.org/webrtc/codelab/src/master/complete/step6/js/lib/adapter.js). This is a [JavaScript shim](http://stackoverflow.com/questions/6599815/what-is-the-difference-between-a-shim-and-a-polyfill), maintained Google, that abstracts away browser differences and spec changes.**
+**This step users [adapter.js](http://goo.gl/RFSAMt). This is a [JavaScript shim](http://stackoverflow.com/questions/6599815/what-is-the-difference-between-a-shim-and-a-polyfill), maintained Google, that abstracts away browser differences and spec changes.**
 
 1. Ensure you have Node, socket.io and [node-static](https://github.com/cloudhead/node-static) installed and working. If in doubt, try the code in Step 5.
 
@@ -333,11 +333,11 @@ This is a DIY step!
 
 ## Step 8: Use a WebRTC library: SimpleWebRTC
 
-Complete example: [complete/step8.html](https://bitbucket.org/webrtc/codelab/src/master/complete/step8.html).
+Complete example: [complete/step8.html](http://goo.gl/ds4mUt).
 
 Abstraction libraries such as SimpleWebRTC make it simple to create WebRTC applications.
 
-1. Create a new document using the code from [complete/step8.html](https://bitbucket.org/webrtc/codelab/src/master/complete/step8.html).
+1. Create a new document using the code from [complete/step8.html](http://goo.gl/ds4mUt).
 2. Open the document in multiple windows or tab.
 
 ### Bonus points
