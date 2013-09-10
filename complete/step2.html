@@ -23,10 +23,17 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 
 var constraints = {video: true};
 
+<<<<<<< HEAD
 function successCallback(stream) {
   window.stream = stream; // stream available to console
   var video = document.querySelector("video");
   video.src = window.URL.createObjectURL(stream);
+=======
+function successCallback(localMediaStream) {
+  window.stream = localMediaStream; // stream available to console
+  var video = document.querySelector("video");
+  video.src = window.URL.createObjectURL(localMediaStream);
+>>>>>>> be8ced84dcf9b2625602ff807ad955b487e3dc41
   video.play();
 }
 

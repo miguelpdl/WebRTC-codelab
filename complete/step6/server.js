@@ -21,7 +21,11 @@ var io = require('socket.io').listen(app);
 io.sockets.on('connection', function (socket){
 
 	function log(){
+<<<<<<< HEAD
 		var array = [">>> Message from server: "];
+=======
+		var array = [">>> "];
+>>>>>>> be8ced84dcf9b2625602ff807ad955b487e3dc41
 	  for (var i = 0; i < arguments.length; i++) {
 	  	array.push(arguments[i]);
 	  }
