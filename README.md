@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-# WebRTC codelab 
-=======
 # WebRTC codelab
->>>>>>> be8ced84dcf9b2625602ff807ad955b487e3dc41
+=======
 
 ##Overview
 
