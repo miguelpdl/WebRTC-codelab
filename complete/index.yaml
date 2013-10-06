@@ -1,0 +1,25 @@
+title        : WebRTC Code Lab 
+url          : http://miguelpdl.com
+contributors : Miguel Ponce de Leon (miguelpdl@openrmc.org)
+     
+labs         :
+
+- title       : 'Install your developer machine'          
+  topicFolder : session01
+  labFolder   : lab
+  steps:
+          - markdown : objectives                               
+            title    : Objectives                              
+          - markdown : step01                               
+            title    : '01'                              
+          - markdown : step02                                
+            title    : '02'
+          - markdown : step03                                
+            title    : '03'
+          - markdown : step04                                
+            title    : '04'
+          - markdown : step05                                
+            title    : '05'
+          - markdown : step06                                
+            title    : '06'
+                            
