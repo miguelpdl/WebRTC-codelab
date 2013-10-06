@@ -13,4 +13,13 @@ labs         :
           - markdown : step01                               
             title    : '01'                              
           - markdown : step02                                
-            title    : '02'                            
+            title    : '02'
+          - markdown : step03                                
+            title    : '03'
+          - markdown : step04                                
+            title    : '04'
+          - markdown : step05                                
+            title    : '05'
+          - markdown : step06                                
+            title    : '06'
+                            
