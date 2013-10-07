@@ -16,4 +16,4 @@ Experience of [Node.js](http://nodejs.org/) and [socket.io](http://socket.io/) w
 
 ##Code Lab Sessions
 
-- Session 01 = Items to install as a WebRTC developer
+- Session 01 = Items to install as a WebRTC developer.
