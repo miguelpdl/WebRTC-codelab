@@ -22,4 +22,10 @@ labs         :
             title    : '05'
           - markdown : step06                                
             title    : '06'
-                            
+
+- title       : 'Add video element to a HTML5 canvas'
+  topicFolder : session02
+  labFolder   : lab
+  steps:
+          - markdown : objectives
+            title    : Objectives                            
