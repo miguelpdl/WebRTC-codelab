@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <title> Install your developer machine </title>
+  
+  
+  <link rel="stylesheet" href="./style/bootstrap.min.css" type="text/css">  
+  <link rel="stylesheet" href="./style/clarity.css" type="text/css"> 
+
+  <link rel="stylesheet" href="./style/highlight.css">
+  <script src="./style/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <!----------------------------------------------------------------------------------------->
+   <style> body  { padding-top: 60px; } </style>    <div class="navbar navbar-fixed-top">
+      <p id="title">Install your developer machine&nbsp;&nbsp;</p>
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><a href="objectives.html">Objectives</a></li>
+          <li><a href="step01.html">01</a></li>
+          <li><a href="step02.html">02</a></li>
+          <li><a href="step03.html">03</a></li>
+          <li><a href="step04.html">04</a></li>
+          <li><a href="step05.html">05</a></li>
+          <li class="active"><a href="step06.html">06</a></li>
+        </ul>
+        <p class="navbar-text pull-right"> <a href="http://miguelpdl.com"> WebRTC Code Lab</a> &nbsp; &nbsp;</p>
+      </div>
+    </div>
+    <!----------------------------------------------------------------------------------------->
+
+
+<h1 id="programming-environment">Programming Environment</h1>
+<p>The programming environment is mainly going to be <a href="http://nodejs.org/download/">node.js</a> which uses JavaScript and a programming model that is event driven in nature, especially the way it handles I/O, and is great in creating concurrent server applications.</p>
+<p><img src="http://www.hanselman.com/blog/content/binary/WindowsLiveWriter/Hans.NETMVCJeffAtwoodandhistechnicalteam_1349C/stackoverflow-logo-250_3.png" alt="StackOverflow" /> say</p>
+<ol style="list-style-type: decimal">
+<li><p>Web development in a dynamic language (JavaScript) on a VM that is incredibly fast (V8). It is much faster than Ruby, Python, or Perl.</p></li>
+<li><p>Ability to handle thousands of concurrent connections with minimal overhead on a single process.</p></li>
+<li><p>JavaScript is perfect for event loops with first class function objects and closures. People already know how to use it this way having used it in the browser to respond to user initiated events.</p></li>
+<li><p>A lot of people already know JavaScript, even people who do not claim to be programmers. It is arguably the most popular programming language.</p></li>
+<li><p>Using JavaScript on a web server as well as the browser reduces the impedance mismatch between the two programming environments which can communicate data structures via JSON that work the same on both sides of the equation. Duplicate form validation code can be shared between server and client, etc.</p></li>
+</ol>
+<p>For this code lab we will prgramme against version V0.10.20</p>
+<p>Will also have to install the modules <a href="http://socket.io">socket.io</a> and <a href="https://npmjs.org/package/node-static">node-static</a>. There is an easy way to install these via the command line tool npm, which is available once node.js has been installed on your machine.</p>
+<pre><code>$ npm install socket.io</code></pre>
+<p><a href="https://npmjs.org/package/socket.io">Socket.io</a> makes <a href="http://www.websocket.org/">WebSockets</a>, as such full-duplex single socket connection over which messages can be sent between client and server available in all browsers. It also enhances WebSockets by providing built-in multiplexing, horizontal scalability, automatic JSON encoding/decoding, and more.</p>
+<pre><code>$ npm install node-static</code></pre>
+<p><a href="https://npmjs.org/package/node-static">node-static</a> is a simple, RFC2616 compliant HTTP static-file streaming module, with built-in caching for nodejs.</p>
+<p>For bonus points later in the code lab it might worth looking at some nodejs hosting providers. Free trials and easy deployment options for Node are available on several hosting sites including <a href="http://www.nodejitsu.com">nodejitsu</a>, <a href="http://www.heroku.com">heroku</a> and <a href="http://www.nodester.com">nodester</a>.</p>
+
+
+      <!----------------------------------------------------------------------------------------->
+      <div id="footer">
+        <p id="footertext">
+          Prepared by  Miguel Ponce de Leon (miguelpdl@openrmc.org). Except where otherwise noted, this content is licensed under a 
+          <a class="externalLink" href="http://creativecommons.org/licenses/by-nc/3.0/" 
+            title="External link to http://creativecommons.org/licenses/by-nc/3.0/" 
+            target="_blank">Creative Commons Attribution-NonCommercial 3.0 License
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </body>
+</html>
+ 
