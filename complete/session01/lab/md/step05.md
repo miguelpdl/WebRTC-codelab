@@ -14,3 +14,12 @@ Although I've used [MacPorts](http://www.macports.org) and found it easier to in
 $ sudo port install git-core +svn +doc +bash_completion +gitweb
 ~~~
 
+Now you should change to your development directory and clone the code lab
+
+~~~
+$ git clone git@github.com:openRMC/webrtc-docs.git
+~~~
+
+Or click the option on the [WebRTC code lab GitHub project page](https://github.com/miguelpdl/WebRTC-codelab) to Clone in Desktop
+
+![](./../images/github-clone.png)
