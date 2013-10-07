@@ -1,6 +1,6 @@
 #Browser
 
-You'll need a WebRTC enabled browser, there are current two browsers that support the WebRTC API
+You'll need a WebRTC enabled browser, there are currently two browsers that support the WebRTC API
 
 ![](http://www.webrtc.org/_/rsrc/1359368396850/home/chrome.png)
 [Google Chrome Stable](http://chrome.google.com)
