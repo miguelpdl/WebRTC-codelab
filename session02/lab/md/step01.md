@@ -1,6 +1,6 @@
 ##Create a blank HTML5 document 
 
-To start of this session create a bare-bones HTML document.
+To start of this session create a bare-bones HTML document. Call it wcl-step01.html
 
 ~~~
 <!DOCTYPE html>
@@ -84,6 +84,6 @@ Launch your Chrome browser and go to [http://127.0.0.1](http://127.0.0.1) to ver
 
 You can now also visit http://127.0.0.1/~USERNAME/ to see the contents of whatever is stored in the user ~/Sites/ directory. If this is a fresh install then more than likely you'll see 
 
-Add your newly created [step01.html](http://127.0.0.1/~miguelpdl/step01.html) file to the directory /Users/USERNAME/Sites in there to see what pops up. Well should be blank, but View Page Source.
+Add your newly created wcl-step01.html file to the directory /Users/USERNAME/Sites in there to see what pops up. Well should be blank, but View Page Source.
 
 If you not seeing anything you may need to [enable Web Sharing](http://superuser.com/questions/358944/why-is-mac-os-x-lion-apache-documentroot-usr-htdocs).
