@@ -1,5 +1,5 @@
 title        : WebRTC Code Lab 
-url          : http://miguelpdl.com
+url          : http://miguelpdl.github.io/WebRTC-codelab/
 contributors : Miguel Ponce de Leon (miguelpdl@openrmc.org)
      
 labs         :
@@ -29,3 +29,5 @@ labs         :
   steps:
           - markdown : objectives
             title    : Objectives                            
+          - markdown : step01
+            title    : '01'                            
