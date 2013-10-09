@@ -31,3 +31,5 @@ labs         :
             title    : Objectives                            
           - markdown : step01
             title    : '01'                            
+          - markdown : step02
+            title    : '02'
