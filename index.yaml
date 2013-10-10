@@ -33,3 +33,5 @@ labs         :
             title    : '01'                            
           - markdown : step02
             title    : '02'
+          - markdown : step03
+            title    : '03'
