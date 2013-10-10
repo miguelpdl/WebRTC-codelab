@@ -24,10 +24,10 @@
       <p id="title">Add video element to a HTML5 canvas&nbsp;&nbsp;</p>
       <div class="navbar-inner">
         <ul class="nav">
-          <li class="active"><a href="objectives.html">Objectives</a></li>
+          <li><a href="objectives.html">Objectives</a></li>
           <li><a href="step01.html">01</a></li>
           <li><a href="step02.html">02</a></li>
-          <li><a href="step03.html">03</a></li>
+          <li class="active"><a href="step03.html">03</a></li>
         </ul>
         <p class="navbar-text pull-right"> <a href="http://miguelpdl.github.io/WebRTC-codelab/"> WebRTC Code Lab</a> &nbsp; &nbsp;</p>
       </div>
@@ -35,17 +35,22 @@
     <!----------------------------------------------------------------------------------------->
 
 
-<h2 id="get-video-from-your-webcam">Get video from your webcam</h2>
-<ul>
-<li><p>The purpose of this session is to get a video element in to a html canvas. Towards achieving this the session will:</p>
-<ul>
-<li>Create a blank HTML5 document</li>
-<li>Add a video element to your page.</li>
-<li>Add JavaScript to the script element on the HTML5 page, to enable the WebRTC API getUserMedia()</li>
-<li>View your page from <em>localhost</em>.</li>
-<li>Bonus points of the session.</li>
-</ul></li>
-</ul>
+<h2 id="bonus-points">Bonus points</h2>
+<ol style="list-style-type: decimal">
+<li>Inspect the stream object from the console.</li>
+<li>What does <code>stream.getVideoTracks()</code> return? Have a look at the <a href="http://www.w3.org/TR/mediacapture-streams/#methods">W3C specs for getUserMedia()</a> to see why this is returned.</li>
+<li>Try calling <code>stream.stop()</code>. Have a look at the <a href="http://www.w3.org/TR/mediacapture-streams/#methods-1">W3C specs for getUserMedia()</a> to see why this worked.</li>
+<li>Look at the constraints object: what happens when you change it to <code>{audio: true, video: true}</code>?</li>
+<li>What size is the video element? How can you get the video's natural size from JavaScript? Use the Chrome Dev Tools to check. Use CSS to make the video full width. How would you ensure the video is no higher than the viewport?</li>
+<li>Try adding CSS filters to the video element (more ideas <a href="http://html5-demos.appspot.com/static/css/filters/index.html">here</a>).</li>
+<li>Try changing constraints: see the sample at <a href="https://simpl.info/getusermedia/constraints/">simpl.info/getusermedia/constraints</a>.</li>
+</ol>
+<p>For example:</p>
+<pre><code>    video {
+      filter: hue-rotate(180deg) saturate(200%);
+      -moz-filter: hue-rotate(180deg) saturate(200%);
+      -webkit-filter: hue-rotate(180deg) saturate(200%);
+    }</code></pre>
 
 
       <!----------------------------------------------------------------------------------------->

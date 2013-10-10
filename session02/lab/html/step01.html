@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <title> Add video element to a HTML5 canvas </title>
+  
+  
+  <link rel="stylesheet" href="./style/bootstrap.min.css" type="text/css">  
+  <link rel="stylesheet" href="./style/clarity.css" type="text/css"> 
+
+  <link rel="stylesheet" href="./style/highlight.css">
+  <script src="./style/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <!----------------------------------------------------------------------------------------->
+   <style> body  { padding-top: 60px; } </style>    <div class="navbar navbar-fixed-top">
+      <p id="title">Add video element to a HTML5 canvas&nbsp;&nbsp;</p>
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><a href="objectives.html">Objectives</a></li>
+          <li class="active"><a href="step01.html">01</a></li>
+          <li><a href="step02.html">02</a></li>
+          <li><a href="step03.html">03</a></li>
+        </ul>
+        <p class="navbar-text pull-right"> <a href="http://miguelpdl.github.io/WebRTC-codelab/"> WebRTC Code Lab</a> &nbsp; &nbsp;</p>
+      </div>
+    </div>
+    <!----------------------------------------------------------------------------------------->
+
+
+<h2 id="create-a-blank-html5-document">Create a blank HTML5 document</h2>
+<p>To start of this session create a bare-bones HTML document. Call it wcl-step01.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+
+&lt;meta name=&quot;keywords&quot; content=&quot;JavaScript, WebRTC&quot; /&gt;
+&lt;meta name=&quot;description&quot; content=&quot;WebRTC codelab&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1&quot;&gt;
+
+&lt;title&gt;WebRTC codelab: Step 1&lt;/title&gt;
+
+&lt;!-- When we finish the codelab we&#39;ll move CSS and JavaScript to separate files --&gt;
+
+&lt;!-- CSS will go here --&gt;
+&lt;style&gt;
+&lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;!-- HTML will go here --&gt;
+
+&lt;!-- JavaScript will go here --&gt;
+&lt;script&gt;
+&lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="serve-the-html-page-from-a-local-web-server">Serve the HTML page from a local web server</h3>
+<p>Now we want you to open that from the localhost web server running on your machine.</p>
+<p>Let's start with the Python option, make sure you are in the same directory as the recently stored wcl-step01.html file.</p>
+<pre><code>python -m SimpleHTTPServer</code></pre>
+<p>It should say Serving HTTP on <a href="http://localhost:8000">0.0.0.0 port 8000</a> and you should see a directory listing now click on wcl-step01.html.</p>
+<p>Now let's try Apache2 on MAC OS X and Ubuntu.</p>
+<p>Have a look at <a href="http://osxdaily.com/2012/09/02/start-apache-web-server-mac-os-x">Setting Up and Starting the Apache Web Server in OS X</a>.</p>
+<pre><code>$ cd /Applications/Utilities/ </code></pre>
+<p>Check that your user apache2 conf file is in place.</p>
+<pre><code>$ ls /etc/apache2/users/USERNAME.conf 
+
+//if not then create one
+$ sudo vim /etc/apache2/users/USERNAME.conf 
+</code></pre>
+<pre><code>&lt;Directory &quot;/Users/USERNAME/Sites/&quot;&gt;
+Options Indexes Multiviews
+AllowOverride AuthConfig Limit
+Order allow,deny
+Allow from all
+&lt;/Directory&gt;</code></pre>
+<pre><code>//Check to see if you have the Sites directory in your home folder
+$ mkdir /Users/USERNAME/Sites</code></pre>
+<p>Make sure to edit the directory path USERNAME to the your username !</p>
+<p>Next, the web server can be started with the following command.</p>
+<pre><code>$ sudo apachectl start</code></pre>
+<p>Launch your Chrome browser and go to <a href="http://127.0.0.1">http://127.0.0.1</a> to verify the server is running, you will see an &quot;It Works!&quot; message. <a href="http://localhost">http://localhost</a> should work too.</p>
+<p>You can now also visit http://127.0.0.1/~USERNAME/ to see the contents of whatever is stored in the user ~/Sites/ directory. If this is a fresh install then more than likely you'll see nothing at all!</p>
+<p>Add your newly created wcl-step01.html file to the directory /Users/USERNAME/Sites and see what pops up. Well should be blank, but View Page Source.</p>
+<p>If you are not seeing anything, you may need to <a href="http://superuser.com/questions/358944/why-is-mac-os-x-lion-apache-documentroot-usr-htdocs">enable Web Sharing</a>.</p>
+<p>For those of you working with Ubuntu 12.04 have a look at <a href="https://help.ubuntu.com/lts/serverguide/httpd.html">HTTPD - Apache2 Web Server</a>.</p>
+
+
+      <!----------------------------------------------------------------------------------------->
+      <div id="footer">
+        <p id="footertext">
+          Prepared by  Miguel Ponce de Leon (miguelpdl@openrmc.org). Except where otherwise noted, this content is licensed under a 
+          <a class="externalLink" href="http://creativecommons.org/licenses/by-nc/3.0/" 
+            title="External link to http://creativecommons.org/licenses/by-nc/3.0/" 
+            target="_blank">Creative Commons Attribution-NonCommercial 3.0 License
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </body>
+</html>
+ 
