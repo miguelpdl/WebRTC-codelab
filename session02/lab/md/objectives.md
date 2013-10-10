@@ -1,6 +1,6 @@
 ##Get video from your webcam
 
-- The purpose of this session is to get a video element in to a html canvas to do this this session will
+- The purpose of this session is to get a video element in to a html canvas. Towards achieving  this the session will:
 
     - Create a blank HTML5 document 
     - Add a video element to your page.
