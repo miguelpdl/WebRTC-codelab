@@ -17,3 +17,4 @@ Experience of [Node.js](http://nodejs.org/) and [socket.io](http://socket.io/) w
 ##Code Lab Sessions
 
 - Session 01 = [Items to install as a WebRTC code lab developer](./session01/lab/html/objectives.html).
+- Session 02 = [Get video from your webcam](./session02/lab/html/objectives.html).
