@@ -35,3 +35,24 @@ labs         :
             title    : '02'
           - markdown : step03
             title    : '03'
+
+- title       : 'Stream video with RTCPeerConnection'
+  topicFolder : session03
+  labFolder   : lab
+  steps:
+          - markdown : objectives
+            title    : Objectives
+          - markdown : step01                               
+            title    : '01'                              
+          - markdown : step02                                
+            title    : '02'
+          - markdown : step03                                
+            title    : '03'
+          - markdown : step04                                
+            title    : '04'
+          - markdown : step05                                
+            title    : '05'
+          - markdown : step06                                
+            title    : '06'
+          - markdown : step07                                
+            title    : '07'
