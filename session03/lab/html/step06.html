@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <title> Stream video with RTCPeerConnection </title>
+  
+  
+  <link rel="stylesheet" href="./style/bootstrap.min.css" type="text/css">  
+  <link rel="stylesheet" href="./style/clarity.css" type="text/css"> 
+
+  <link rel="stylesheet" href="./style/highlight.css">
+  <script src="./style/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <!----------------------------------------------------------------------------------------->
+   <style> body  { padding-top: 60px; } </style>    <div class="navbar navbar-fixed-top">
+      <p id="title">Stream video with RTCPeerConnection&nbsp;&nbsp;</p>
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><a href="objectives.html">Objectives</a></li>
+          <li><a href="step01.html">01</a></li>
+          <li><a href="step02.html">02</a></li>
+          <li><a href="step03.html">03</a></li>
+          <li><a href="step04.html">04</a></li>
+          <li><a href="step05.html">05</a></li>
+          <li class="active"><a href="step06.html">06</a></li>
+          <li><a href="step07.html">07</a></li>
+        </ul>
+        <p class="navbar-text pull-right"> <a href="http://miguelpdl.github.io/WebRTC-codelab/"> WebRTC Code Lab</a> &nbsp; &nbsp;</p>
+      </div>
+    </div>
+    <!----------------------------------------------------------------------------------------->
+
+
+<h2 id="get-and-share-ice-candidates-network-information.">Get and share ICE candidates: network information.</h2>
+<p>Edit that script element of the HTML docucment to add JS for <a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/#ice">ICE candidates</a> which are needed for a networking framework which assists with connecting peers, such as two video chat clients we have in this session. Initially, ICE tries to connect peers directly, with the lowest possible latency, via UDP. In this process, servers have a single task: to enable a peer behind a NAT to find out its public address and port.</p>
+<pre><code>
+function gotLocalIceCandidate(event){
+  if (event.candidate) {
+    remotePeerConnection.addIceCandidate(new RTCIceCandidate(event.candidate));
+    trace(&quot;Local ICE candidate: \n&quot; + event.candidate.candidate);
+  }
+}
+
+function gotRemoteIceCandidate(event){
+  if (event.candidate) {
+    localPeerConnection.addIceCandidate(new RTCIceCandidate(event.candidate));
+    trace(&quot;Remote ICE candidate: \n &quot; + event.candidate.candidate);
+  }
+}
+</code></pre>
+
+
+      <!----------------------------------------------------------------------------------------->
+      <div id="footer">
+        <p id="footertext">
+          Prepared by  Miguel Ponce de Leon (miguelpdl@openrmc.org). Except where otherwise noted, this content is licensed under a 
+          <a class="externalLink" href="http://creativecommons.org/licenses/by-nc/3.0/" 
+            title="External link to http://creativecommons.org/licenses/by-nc/3.0/" 
+            target="_blank">Creative Commons Attribution-NonCommercial 3.0 License
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </body>
+</html>
+ 
