@@ -56,3 +56,5 @@ labs         :
             title    : '06'
           - markdown : step07                                
             title    : '07'
+          - markdown : step08
+            title    : '08'
