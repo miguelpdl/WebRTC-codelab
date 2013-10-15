@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <title> Stream arbitrary data with RTCDataChannel </title>
+  
+  
+  <link rel="stylesheet" href="./style/bootstrap.min.css" type="text/css">  
+  <link rel="stylesheet" href="./style/clarity.css" type="text/css"> 
+
+  <link rel="stylesheet" href="./style/highlight.css">
+  <script src="./style/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <!----------------------------------------------------------------------------------------->
+   <style> body  { padding-top: 60px; } </style>    <div class="navbar navbar-fixed-top">
+      <p id="title">Stream arbitrary data with RTCDataChannel&nbsp;&nbsp;</p>
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><a href="objectives.html">Objectives</a></li>
+          <li class="active"><a href="step01.html">01</a></li>
+          <li><a href="step02.html">02</a></li>
+          <li><a href="step03.html">03</a></li>
+          <li><a href="step04.html">04</a></li>
+          <li><a href="step05.html">05</a></li>
+          <li><a href="step06.html">06</a></li>
+          <li><a href="step07.html">07</a></li>
+        </ul>
+        <p class="navbar-text pull-right"> <a href="http://miguelpdl.github.io/WebRTC-codelab/"> WebRTC Code Lab</a> &nbsp; &nbsp;</p>
+      </div>
+    </div>
+    <!----------------------------------------------------------------------------------------->
+
+
+<h2 id="html5-document-with-two-text-areas-and-associated-buttons">HTML5 document with two text areas and associated buttons</h2>
+<ol style="list-style-type: decimal">
+<li>To start off this session, create a new HTML document, and add with two text areas and associated buttons for the lab.</li>
+</ol>
+<p>Call it wcl-session04.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+
+&lt;meta name=&quot;keywords&quot; content=&quot;JavaScript, WebRTC&quot; /&gt;
+&lt;meta name=&quot;description&quot; content=&quot;WebRTC codelab&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1&quot;&gt;
+
+&lt;title&gt;WebRTC codelab: Session 04&lt;/title&gt;
+
+&lt;style&gt;
+&lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+        &lt;textarea id=&quot;dataChannelSend&quot; disabled placeholder=&quot;Press Start, enter some text, then press Send.&quot;&gt;&lt;/textarea&gt;
+        &lt;textarea id=&quot;dataChannelReceive&quot; disabled&gt;&lt;/textarea&gt;
+
+  &lt;div id=&quot;buttons&quot;&gt;
+    &lt;button id=&quot;startButton&quot;&gt;Start&lt;/button&gt;
+    &lt;button id=&quot;sendButton&quot;&gt;Send&lt;/button&gt;
+    &lt;button id=&quot;closeButton&quot;&gt;Stop&lt;/button&gt;
+  &lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+
+      <!----------------------------------------------------------------------------------------->
+      <div id="footer">
+        <p id="footertext">
+          Prepared by  Miguel Ponce de Leon (miguelpdl@openrmc.org). Except where otherwise noted, this content is licensed under a 
+          <a class="externalLink" href="http://creativecommons.org/licenses/by-nc/3.0/" 
+            title="External link to http://creativecommons.org/licenses/by-nc/3.0/" 
+            target="_blank">Creative Commons Attribution-NonCommercial 3.0 License
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </body>
+</html>
+ 
