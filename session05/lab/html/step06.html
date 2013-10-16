@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <title> Set up a signaling server and exchange messages </title>
+  
+  
+  <link rel="stylesheet" href="./style/bootstrap.min.css" type="text/css">  
+  <link rel="stylesheet" href="./style/clarity.css" type="text/css"> 
+
+  <link rel="stylesheet" href="./style/highlight.css">
+  <script src="./style/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <!----------------------------------------------------------------------------------------->
+   <style> body  { padding-top: 60px; } </style>    <div class="navbar navbar-fixed-top">
+      <p id="title">Set up a signaling server and exchange messages&nbsp;&nbsp;</p>
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><a href="objectives.html">Objectives</a></li>
+          <li><a href="step01.html">01</a></li>
+          <li><a href="step02.html">02</a></li>
+          <li><a href="step03.html">03</a></li>
+          <li><a href="step04.html">04</a></li>
+          <li><a href="step05.html">05</a></li>
+          <li class="active"><a href="step06.html">06</a></li>
+        </ul>
+        <p class="navbar-text pull-right"> <a href="http://miguelpdl.github.io/WebRTC-codelab/"> WebRTC Code Lab</a> &nbsp; &nbsp;</p>
+      </div>
+    </div>
+    <!----------------------------------------------------------------------------------------->
+
+
+<h2 id="bonus-points">Bonus points</h2>
+<ol style="list-style-type: decimal">
+<li><p>Try deploying your messaging server so you can access it via a public URL. (Free trials and easy deployment options for Node are available on several hosting sites including <a href="http://www.nodejitsu.com">nodejitsu</a>, <a href="http://www.heroku.com">heroku</a> and <a href="http://www.nodester.com">nodester</a>.)</p></li>
+<li><p>What alternative messaging mechanisms are available? (Take a look at <a href="http://apprtc.appspot.com">apprtc.appspot.com</a>.) What problems might we encounter using 'pure' WebSocket? (Take a look at Arnout Kazemier's presentation, <a href="https://speakerdeck.com/3rdeden/websuckets">WebSuckets</a>.)</p></li>
+<li><p>What issues might be involved with scaling this application? Can you develop a method for testing thousands or millions of simultaneous room requests.</p></li>
+<li><p>Try out Remy Sharp's tool <a href="https://github.com/remy/nodemon">nodemon</a>. This monitors any changes in your Node.js application and automatically restarts the server when changes are saved.</p></li>
+<li><p>This app uses a JavaScript prompt to get a room name. Work out a way to get the room name from the URL, for example <em>localhost:2013/foo</em> would give the room name <em>foo</em>.</p></li>
+</ol>
+
+
+      <!----------------------------------------------------------------------------------------->
+      <div id="footer">
+        <p id="footertext">
+          Prepared by  Miguel Ponce de Leon (miguelpdl@openrmc.org). Except where otherwise noted, this content is licensed under a 
+          <a class="externalLink" href="http://creativecommons.org/licenses/by-nc/3.0/" 
+            title="External link to http://creativecommons.org/licenses/by-nc/3.0/" 
+            target="_blank">Creative Commons Attribution-NonCommercial 3.0 License
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </body>
+</html>
+ 
