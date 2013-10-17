@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
 
-  <title> Stream arbitrary data with RTCDataChannel </title>
+  <title> RTCPeerConnection with messaging </title>
   
   
   <link rel="stylesheet" href="./style/bootstrap.min.css" type="text/css">  
@@ -21,7 +21,7 @@
 
     <!----------------------------------------------------------------------------------------->
    <style> body  { padding-top: 60px; } </style>    <div class="navbar navbar-fixed-top">
-      <p id="title">Stream arbitrary data with RTCDataChannel&nbsp;&nbsp;</p>
+      <p id="title">RTCPeerConnection with messaging&nbsp;&nbsp;</p>
       <div class="navbar-inner">
         <ul class="nav">
           <li><a href="objectives.html">Objectives</a></li>
@@ -30,8 +30,7 @@
           <li><a href="step03.html">03</a></li>
           <li><a href="step04.html">04</a></li>
           <li><a href="step05.html">05</a></li>
-          <li><a href="step06.html">06</a></li>
-          <li class="active"><a href="step07.html">07</a></li>
+          <li class="active"><a href="step06.html">06</a></li>
         </ul>
         <p class="navbar-text pull-right"> <a href="http://miguelpdl.github.io/WebRTC-codelab/"> WebRTC Code Lab</a> &nbsp; &nbsp;</p>
       </div>
@@ -41,11 +40,12 @@
 
 <h2 id="bonus-points">Bonus points</h2>
 <ol style="list-style-type: decimal">
-<li>Try out RTCDataChannel file sharing with <a href="http://www.sharefest.me/">Sharefest</a>. When would RTCDataChannel need to provide reliable delivery of data, and when might performance be more important -- even if that means losing some data?</li>
-<li>Use CSS to improve page layout, and add a placeholder attribute to the <em>dataChannelReceive</em> textarea.</li>
-<li>Test the page on a mobile device.</li>
+<li><p>This application only supports one-to-one video chat. How might you change the design to enable more than one person to share the same video chat room? (Look at <a href="http://talky.io">talky.io</a> for an example of this in action.)</p></li>
+<li><p>The example has the room name <em>foo</em> hard coded. What would be the best way to enable other room names?</p></li>
+<li><p>Does the app work on mobile? Try it out on a phone, on a 7&quot; and a 10&quot; tablet. What layout, UI and UX changes would be required to ensure a good mobile experience?</p></li>
+<li><p>Deploy your app at a public URL (see above for hosting options). Try different network configurations, for example with one user on wifi and another on 3G. Any problems?</p></li>
+<li><p>How would users share the room name? Try to build an alternative to sharing room names.</p></li>
 </ol>
-<p>Finally if you are having any difficulty with putting this session together have a look at <a href="https://bitbucket.org/webrtc/codelab/raw/master/complete/step4.html">complete Session 04 HTML</a>.</p>
 
 
       <!----------------------------------------------------------------------------------------->
