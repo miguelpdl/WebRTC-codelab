@@ -1,0 +1,48 @@
+body  
+{
+ //padding-top: 60px; 
+}
+
+h1 
+{
+  font-style:italic;
+  font-size:120%;
+  border-bottom: thin solid DarkBlue;
+}
+h2 
+{
+  font-size:110%;
+  border-bottom: thin solid DarkBlue;
+}
+h3 
+{
+  font-size:100%;
+  border-bottom: thin solid DarkBlue;
+}
+
+#footer
+{
+  margin-top:30px;
+  border-top: thin solid DarkBlue;
+}
+
+#footertext 
+{
+  font-size:70%
+}
+
+#title 
+{
+  font-size:120%;
+  color: black;
+  text-align: right;
+  background-color : white;
+}
+
+img 
+{
+   padding:1px;
+   border:1px solid DarkBlue;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
