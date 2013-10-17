@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
 
-  <title> Stream arbitrary data with RTCDataChannel </title>
+  <title> RTCPeerConnection with messaging </title>
   
   
   <link rel="stylesheet" href="./style/bootstrap.min.css" type="text/css">  
@@ -21,17 +21,16 @@
 
     <!----------------------------------------------------------------------------------------->
    <style> body  { padding-top: 60px; } </style>    <div class="navbar navbar-fixed-top">
-      <p id="title">Stream arbitrary data with RTCDataChannel&nbsp;&nbsp;</p>
+      <p id="title">RTCPeerConnection with messaging&nbsp;&nbsp;</p>
       <div class="navbar-inner">
         <ul class="nav">
           <li><a href="objectives.html">Objectives</a></li>
           <li><a href="step01.html">01</a></li>
           <li><a href="step02.html">02</a></li>
           <li><a href="step03.html">03</a></li>
-          <li><a href="step04.html">04</a></li>
+          <li class="active"><a href="step04.html">04</a></li>
           <li><a href="step05.html">05</a></li>
           <li><a href="step06.html">06</a></li>
-          <li class="active"><a href="step07.html">07</a></li>
         </ul>
         <p class="navbar-text pull-right"> <a href="http://miguelpdl.github.io/WebRTC-codelab/"> WebRTC Code Lab</a> &nbsp; &nbsp;</p>
       </div>
@@ -39,13 +38,10 @@
     <!----------------------------------------------------------------------------------------->
 
 
-<h2 id="bonus-points">Bonus points</h2>
-<ol style="list-style-type: decimal">
-<li>Try out RTCDataChannel file sharing with <a href="http://www.sharefest.me/">Sharefest</a>. When would RTCDataChannel need to provide reliable delivery of data, and when might performance be more important -- even if that means losing some data?</li>
-<li>Use CSS to improve page layout, and add a placeholder attribute to the <em>dataChannelReceive</em> textarea.</li>
-<li>Test the page on a mobile device.</li>
-</ol>
-<p>Finally if you are having any difficulty with putting this session together have a look at <a href="https://bitbucket.org/webrtc/codelab/raw/master/complete/step4.html">complete Session 04 HTML</a>.</p>
+<h2 id="run-the-server">Run the server</h2>
+<p>As per the <a href="./../../../session01/lab/html/step06.html">developer environment instalation guide</a> make sure to have Node, socket.io and <a href="https://github.com/cloudhead/node-static">node-static</a> installed.</p>
+<p>Now run the server (<em>server.js</em>). To start the server, run the following command from a terminal in your application directory:</p>
+<pre><code>$ node server.js</code></pre>
 
 
       <!----------------------------------------------------------------------------------------->

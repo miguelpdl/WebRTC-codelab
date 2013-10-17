@@ -21,3 +21,4 @@ Experience of [Node.js](http://nodejs.org/) and [socket.io](http://socket.io/) w
 - Session 03 = [Stream video with RTCPeerConnection](./session03/lab/html/objectives.html).
 - Session 04 = [Stream arbitrary data with RTCDataChannel](./session04/lab/html/objectives.html).
 - Session 05 = [Set up a signaling server and exchange messages](./session05/lab/html/objectives.html).
+- Session 05 = [RTCPeerConnection with messaging](./session06/lab/html/objectives.html).

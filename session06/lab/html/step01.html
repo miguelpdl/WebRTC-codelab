@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <title> RTCPeerConnection with messaging </title>
+  
+  
+  <link rel="stylesheet" href="./style/bootstrap.min.css" type="text/css">  
+  <link rel="stylesheet" href="./style/clarity.css" type="text/css"> 
+
+  <link rel="stylesheet" href="./style/highlight.css">
+  <script src="./style/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <!----------------------------------------------------------------------------------------->
+   <style> body  { padding-top: 60px; } </style>    <div class="navbar navbar-fixed-top">
+      <p id="title">RTCPeerConnection with messaging&nbsp;&nbsp;</p>
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><a href="objectives.html">Objectives</a></li>
+          <li class="active"><a href="step01.html">01</a></li>
+          <li><a href="step02.html">02</a></li>
+          <li><a href="step03.html">03</a></li>
+          <li><a href="step04.html">04</a></li>
+          <li><a href="step05.html">05</a></li>
+          <li><a href="step06.html">06</a></li>
+        </ul>
+        <p class="navbar-text pull-right"> <a href="http://miguelpdl.github.io/WebRTC-codelab/"> WebRTC Code Lab</a> &nbsp; &nbsp;</p>
+      </div>
+    </div>
+    <!----------------------------------------------------------------------------------------->
+
+
+<h2 id="node-server-application">Node server application</h2>
+<p>The Node server application in this step has two tasks.</p>
+<h2 id="section">-</h2>
+<p>In a new directory for Session 06 create a file called <em>server.js</em> and add in variables we need for this session.</p>
+<pre><code>var static = require(&#39;node-static&#39;);
+var http = require(&#39;http&#39;);
+var file = new(static.Server)();
+var app = http.createServer(function (req, res) {
+  file.serve(req, res);
+}).listen(2013);
+
+var io = require(&#39;socket.io&#39;).listen(app);</code></pre>
+<pre><code>io.sockets.on(&#39;connection&#39;, function (socket){
+
+        function log(){
+                var array = [&quot;&gt;&gt;&gt; Message from server: &quot;];
+          for (var i = 0; i &lt; arguments.length; i++) {
+                array.push(arguments[i]);
+          }
+            socket.emit(&#39;log&#39;, array);
+        }
+
+        socket.on(&#39;message&#39;, function (message) {
+                log(&#39;Got message: &#39;, message);
+    // For a real app, should be room only (not broadcast)
+                socket.broadcast.emit(&#39;message&#39;, message);
+        });</code></pre>
+<p>Next on a create or join we must manage the WebRTC video chat 'rooms', so add the methods to handle this.</p>
+<pre><code>        socket.on(&#39;create or join&#39;, function (room) {
+                var numClients = io.sockets.clients(room).length;
+
+                log(&#39;Room &#39; + room + &#39; has &#39; + numClients + &#39; client(s)&#39;);
+                log(&#39;Request to create or join room&#39;, room);
+
+                if (numClients == 0){
+                        socket.join(room);
+                        socket.emit(&#39;created&#39;, room);
+                } else if (numClients == 1) {
+                        io.sockets.in(room).emit(&#39;join&#39;, room);
+                        socket.join(room);
+                        socket.emit(&#39;joined&#39;, room);
+                } else { // max two clients
+                        socket.emit(&#39;full&#39;, room);
+                }
+                socket.emit(&#39;emit(): client &#39; + socket.id + &#39; joined room &#39; + room);
+                socket.broadcast.emit(&#39;broadcast(): client &#39; + socket.id + &#39; joined room &#39; + room);
+
+        });
+
+});
+</code></pre>
+
+
+      <!----------------------------------------------------------------------------------------->
+      <div id="footer">
+        <p id="footertext">
+          Prepared by  Miguel Ponce de Leon (miguelpdl@openrmc.org). Except where otherwise noted, this content is licensed under a 
+          <a class="externalLink" href="http://creativecommons.org/licenses/by-nc/3.0/" 
+            title="External link to http://creativecommons.org/licenses/by-nc/3.0/" 
+            target="_blank">Creative Commons Attribution-NonCommercial 3.0 License
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </body>
+</html>
+ 
