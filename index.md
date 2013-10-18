@@ -23,3 +23,4 @@ Experience of [Node.js](http://nodejs.org/) and [socket.io](http://socket.io/) w
 - Session 05 = [Set up a signaling server and exchange messages](./session05/lab/html/objectives.html).
 - Session 06 = [RTCPeerConnection with messaging](./session06/lab/html/objectives.html).
 - Session 07 = [Putting it all together: RTCPeerConnection + RTCDataChannel + signaling](./session07/lab/html/objectives.html).
+- Session 08 = [Use a WebRTC library: SimpleWebRTC](./session08/lab/html/objectives.html).
