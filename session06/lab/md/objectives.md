@@ -2,8 +2,6 @@
 
 In this step, we build a video chat client, using the signaling server created in [Session 05](./../../session05/lab/html/objectives.html) and the RTCPeerConnection code from [Session 03](./../../session03/lab/html/objectives.html).
 
-**This step uses [adapter.js](https://code.google.com/p/webrtc/source/browse/stable/samples/js/base/adapter.js). This is a [JavaScript shim](http://stackoverflow.com/questions/6599815/what-is-the-difference-between-a-shim-and-a-polyfill), maintained by Google, that abstracts away browser differences and spec changes.**
-
 In order to complete this session ensure you have Nodejs, socket.io and [node-static](https://github.com/cloudhead/node-static) installed and working. If in doubt, try the code in [Session 05](./../../session05/lab/html/objectives.html).
 
 

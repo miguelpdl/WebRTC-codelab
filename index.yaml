@@ -117,3 +117,10 @@ labs         :
             title    : '05'
           - markdown : step06                                
             title    : '06'
+
+- title       : 'Putting it all together: RTCPeerConnection + RTCDataChannel + signaling'
+  topicFolder : session07
+  labFolder   : lab
+  steps:
+          - markdown : objectives
+            title    : Objectives
