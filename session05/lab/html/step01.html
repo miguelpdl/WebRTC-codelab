@@ -41,11 +41,11 @@
 <h2 id="node-server-application">Node server application</h2>
 <p>The Node server application in this step has two tasks.</p>
 <ul>
-<li>To act as a messaging intermediary</li>
-<li>To manage WebRTC video chat 'rooms'</li>
+<li>To act as a messaging intermediary.</li>
+<li>To manage WebRTC video chat 'rooms'.</li>
 </ul>
 <p>This simple WebRTC application will only permit a maximum of two peers to share a room.</p>
-<p>Create a file called <em>server.js</em> and add some variables we need for this session</p>
+<p>Create a file called <em>server.js</em> and add some variables we need for this session.</p>
 <pre><code>var static = require(&#39;node-static&#39;);
 var http = require(&#39;http&#39;);
 var file = new(static.Server)();
@@ -55,7 +55,7 @@ var app = http.createServer(function (req, res) {
 }).listen(2013);
 
 var io = require(&#39;socket.io&#39;).listen(app);</code></pre>
-<p>Now to the In the same <em>server.js</em> file add the base messaging intermediary functions.</p>
+<p>Now in the same <em>server.js</em> file add the base messaging intermediary functions.</p>
 <pre><code>io.sockets.on(&#39;connection&#39;, function (socket){
 
   // convenience function to log server messages on the client
@@ -73,7 +73,7 @@ var io = require(&#39;socket.io&#39;).listen(app);</code></pre>
                 socket.broadcast.emit(&#39;message&#39;, message);
         });
 </code></pre>
-<p>Next on a create or join we must manage the WebRTC video chat 'rooms', so add the methods to handle this.</p>
+<p>Next on a &quot;create or join&quot; we must manage the WebRTC video chat 'rooms', so add the methods to handle this.</p>
 <pre><code>       socket.on(&#39;create or join&#39;, function (room) {
                 var numClients = io.sockets.clients(room).length;
 
