@@ -2,12 +2,12 @@
 
 The Node server application in this step has two tasks.
 
-- To act as a messaging intermediary
-- To manage WebRTC video chat 'rooms'
+- To act as a messaging intermediary.
+- To manage WebRTC video chat 'rooms'.
 
  This simple WebRTC application will only permit a maximum of two peers to share a room.
 
-Create a file called _server.js_ and add some variables we need for this session
+Create a file called _server.js_ and add some variables we need for this session.
 
 ~~~
 var static = require('node-static');
@@ -21,7 +21,7 @@ var app = http.createServer(function (req, res) {
 var io = require('socket.io').listen(app);
 ~~~
 
-Now to the In the same _server.js_ file add the base messaging intermediary functions.
+Now in the same _server.js_ file add the base messaging intermediary functions.
 
 ~~~
 io.sockets.on('connection', function (socket){
@@ -43,7 +43,7 @@ io.sockets.on('connection', function (socket){
 
 ~~~
 
-Next on a create or join we must manage the WebRTC video chat 'rooms', so add the methods to handle this.
+Next on a "create or join" we must manage the WebRTC video chat 'rooms', so add the methods to handle this.
 
 ~~~
        socket.on('create or join', function (room) {

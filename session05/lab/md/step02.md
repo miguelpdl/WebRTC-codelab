@@ -1,8 +1,8 @@
 ## Create the client web page
 
-Now we must create the client web app, and so lets start by creating a new HTML5 document call it _index.html_.
+Now we must create the client web app, and so lets start by creating a new HTML5 document and call it _index.html_.
 
-Add the client code
+Add the following client code.
 
 ~~~
 <!DOCTYPE html>
