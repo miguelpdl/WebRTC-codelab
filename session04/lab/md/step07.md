@@ -4,4 +4,4 @@
 2. Use CSS to improve page layout, and add a placeholder attribute to the _dataChannelReceive_ textarea.
 3. Test the page on a mobile device.
 
-Finally if you are having any difficulty with putting this session together have a look at [complete Session 04 HTML](https://bitbucket.org/webrtc/codelab/raw/master/complete/step4.html).
+Finally if you are having any difficulty with putting this session together have a look at [complete Session 04 HTML](https://bitbucket.org/webrtc/codelab/src/master/complete/step4).
