@@ -9,4 +9,4 @@
 4. Take a look at _localPeerConnection.localDescription_. What does SDP format look like?
 
 
-Finally if you are having any difficulty with putting this session together have a look at [complete Session 03 HTML](https://bitbucket.org/webrtc/codelab/raw/master/complete/step3.html).
+Finally if you are having any difficulty with putting this session together have a look at [complete Session 03 HTML](https://bitbucket.org/webrtc/codelab/src/master/complete/step3).
