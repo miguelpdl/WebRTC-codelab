@@ -47,7 +47,9 @@ Next on a "create or join" we must manage the WebRTC video chat 'rooms', so add 
 
 ~~~
        socket.on('create or join', function (room) {
-                var numClients = io.sockets.clients(room).length;
+                var clients = io.sockets.adapter.rooms[room]; 
+				var numClients = (typeof clients !== 'undefined') ? 
+				Object.keys(clients).length : 0;
 
                 log('Room ' + room + ' has ' + numClients + ' client(s)');
                 log('Request to create or join room ' + room);
